@@ -11,7 +11,7 @@ int main() {
     printf("=== PIERRE - FEUILLE - CISEAUX (5 Manches) ===\n");
     printf("Regles : 1 = Pierre, 2 = Feuille, 3 = Ciseaux\n\n");
 
-    while (manche <= 5) {
+while (manche <= 7 && abs(scoreJoueur - scoreOrdi) < 2) {
 
         printf("--- Manche %d/5 ---\n", manche);
 
