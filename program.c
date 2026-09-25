@@ -33,7 +33,7 @@ printf("Votre choix (1, 2, 3, 4 ou 5) : ");
     printf("Vous gagnez cette manche !\n");
     scoreJoueur = scoreJoueur + 1;
 }
-        }
+        
         else {
             printf("L'ordinateur gagne cette manche !\n");
             scoreOrdi = scoreOrdi + 1;
