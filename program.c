@@ -8,28 +8,31 @@ int main() {
     int choixJoueur;
     int choixOrdi;
 
-    printf("=== PIERRE - FEUILLE - CISEAUX (5 Manches) ===\n");
-    printf("Regles : 1 = Pierre, 2 = Feuille, 3 = Ciseaux\n\n");
+   printf("=== PIERRE - FEUILLE - CISEAUX - LEZARD - SPOCK ===\n");
+printf("Regles : 1 = Pierre, 2 = Feuille, 3 = Ciseaux, 4 = Lezard, 5 = Spock\n\n");
 
 while (manche <= 7 && abs(scoreJoueur - scoreOrdi) < 2) {
 
         printf("--- Manche %d/5 ---\n", manche);
 
-        printf("Votre choix (1, 2 ou 3) : ");
+printf("Votre choix (1, 2, 3, 4 ou 5) : ");
         scanf("%d", &choixJoueur);
 
-        choixOrdi = (rand() % 3) + 1;
+        choixOrdi = (rand() % 5) + 1;
 
         printf("L'ordinateur a choisi : %d\n", choixOrdi);
 
         if (choixJoueur == choixOrdi) {
             printf("Egalite !\n");
         }
-        else if ((choixJoueur == 1 && choixOrdi == 3) ||
-                 (choixJoueur == 2 && choixOrdi == 1) ||
-                 (choixJoueur == 3 && choixOrdi == 2)) {
-            printf("Vous gagnez cette manche !\n");
-            scoreJoueur = scoreJoueur + 1;
+        else if ((choixJoueur == 1 && (choixOrdi == 3 || choixOrdi == 4)) ||
+         (choixJoueur == 2 && (choixOrdi == 1 || choixOrdi == 5)) ||
+         (choixJoueur == 3 && (choixOrdi == 2 || choixOrdi == 4)) ||
+         (choixJoueur == 4 && (choixOrdi == 2 || choixOrdi == 5)) ||
+         (choixJoueur == 5 && (choixOrdi == 1 || choixOrdi == 3))) {
+    printf("Vous gagnez cette manche !\n");
+    scoreJoueur = scoreJoueur + 1;
+}
         }
         else {
             printf("L'ordinateur gagne cette manche !\n");
